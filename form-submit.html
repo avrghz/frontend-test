@@ -7,23 +7,31 @@
     <title>Document</title>
   </head>
   <body>
-    <p>Fixme: the response is printed on the UI only for a fraction of second.</p>
+    <p>Fixme: the result is printed on the UI only for a fraction of second.</p>
     <form>
       <input id="firstName" name="firstName" />
       <input id="lastName" name="lastName" />
       <button id="saveButton">Save Button</button>
       <button id="otherButton">Other button in the form</button>
-      <div id="response"></div>
+
+      <!-- Response goes here -->
+      <div id="result"></div>
     </form>
 
     <script>
       (() => {
+        const otherButton = document.getElementById("otherButton");
+
         otherButton.addEventListener("click", (e) => {
+          const firstName = document.getElementById("firstName");
+          const lastName = document.getElementById("lastName");
+          const result = document.getElementById("result");
+
           const _firstName = `First name : ${firstName.value}`;
           const _lastName = `Last name : ${lastName.value}`;
 
-          response.append(_firstName);
-          response.append(_lastName);
+          result.append(_firstName);
+          result.append(_lastName);
           alert(_firstName + " " + _lastName);
         });
       })();

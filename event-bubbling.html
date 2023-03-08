@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <p>Fixme - On click of the button both messages are logged to console</p>
+    <p>Fixme - On click of the button 2 messages are logged to console</p>
 
     <div id="container">
       <button id="button">Save</button>
@@ -15,6 +15,9 @@
 
     <script>
       (() => {
+        const container = document.getElementById("container");
+        const button = document.getElementById("button");
+
         button.addEventListener("click", (e) => {
           console.log("I am button");
         });
