@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Fixme: the response is printed on the UI only for a fraction of second.</p>
+    <form>
+      <input id="firstName" name="firstName" />
+      <input id="lastName" name="lastName" />
+      <button id="saveButton">Save Button</button>
+      <button id="otherButton">Other button in the form</button>
+      <div id="response"></div>
+    </form>
+
+    <script>
+      (() => {
+        otherButton.addEventListener("click", (e) => {
+          const _firstName = `First name : ${firstName.value}`;
+          const _lastName = `Last name : ${lastName.value}`;
+
+          response.append(_firstName);
+          response.append(_lastName);
+          alert(_firstName + " " + _lastName);
+        });
+      })();
+    </script>
+  </body>
+</html>
